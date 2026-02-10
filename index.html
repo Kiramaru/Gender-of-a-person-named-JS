@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form">
+            <div class="content">
+                <button onclick="Descript()">Описание</button> 
+                <p></p>  
+                <p name="des">Описание работы сервиса:</p>
+                <p name="des">Введите на английском языке имя и сервис выведет пол человека с 
+                    таким именем и вероятность правильности ответа. Разработчик
+                 захотел не отвлекать вас от работы сервиса своими персональными данными</p>
+                <div id="app"> 
+                    <input v-model="linkname" type="text" id="name">
+                    <p class="data">Имя: {{ name }}</p>
+                    <p class="data">Пол: {{ gender }}</p>
+                    <p class="data">Уверенность в ответе: {{ persent }}</p>
+                    <section v-if="errored">
+                        <p>Сервис временно не работает</p>
+                    </section>
+                    <div v-if="loading == true">
+                        <p>Загрузка...</p>   
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="vue.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,17 @@
+html{
+    background-color: #ADD8E6;
+    color: #000080;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 500px;
+    background-color: #6495ED;
+    padding: 30px 30px 30px 30px;
+}
+button{
+    color:#000080;
+}
